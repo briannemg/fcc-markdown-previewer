@@ -1,0 +1,114 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", "Segoe UI", sans-serif;
+  background: linear-gradient(125deg, #dfe9f3, #e6d5f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* App container */
+#root {
+  width: 100%;
+  max-width: 1000px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Shared styling for both editor and preview */
+.markdown-box {
+  width: 100%;
+  min-height: 300px;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+textarea.markdown-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.6);
+}
+
+/* Specific styling for the preview box */
+#preview {
+  background-color: #fdfbff;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+
+/* Markdown content styles */
+#preview h1,
+#preview h2,
+#preview h3 {
+  color: #5b21b6;
+  margin-top: 1rem;
+}
+
+#preview p {
+  margin: 0.5rem 0;
+}
+
+#preview code {
+  background-color: #f0f0ff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  color: #7c3aed;
+}
+
+#preview pre {
+  background-color: #ede9fe;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+#preview blockquote {
+  border-left: 5px solid #a78bfa;
+  padding-left: 1rem;
+  color: #6b7280;
+  margin: 1rem 0;
+  background-color: #f3f0ff;
+  border-radius: 0.5rem;
+}
+
+#preview ul,
+#preview ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+#preview a {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+#preview img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
